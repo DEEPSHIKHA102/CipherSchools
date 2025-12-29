@@ -1,0 +1,213 @@
+.leetcode-workspace {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: #282828;
+  color: #eff1f6;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  overflow: hidden;
+
+  .lc-nav {
+    height: 50px;
+    background: #333;
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+    border-bottom: 1px solid #444;
+    flex-shrink: 0;
+
+    .back-link { 
+      background: none; 
+      border: none; 
+      color: #aaa; 
+      cursor: pointer; 
+      font-size: 14px;
+      &:hover { color: #fff; } 
+    }
+    .divider { margin: 0 10px; color: #555; }
+    .prob-title { font-weight: 600; color: #fff; font-size: 14px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  }
+
+
+  .content-split {
+    display: flex;
+    flex-direction: column; 
+    flex: 1;
+    overflow-y: auto; 
+
+   
+    .description-panel {
+      width: 100%;
+      background: #282828;
+      display: flex;
+      flex-direction: column;
+      border-bottom: 2px solid #3e3e3e;
+
+      .panel-tabs {
+        background: #333;
+        padding: 8px 15px;
+        button { 
+          background: none; 
+          border: none; 
+          color: #fff; 
+          border-bottom: 2px solid #ffa116; 
+          padding-bottom: 3px; 
+          font-weight: 600; 
+          font-size: 13px;
+        }
+      }
+
+      .panel-body {
+        padding: 20px;
+        h2 { margin-top: 0; font-size: 20px; color: #fff; }
+        .diff-badge { 
+          color: #00af9b; 
+          background: rgba(0,175,155,0.1); 
+          width: fit-content; 
+          padding: 2px 8px; 
+          border-radius: 4px; 
+          font-size: 11px; 
+          margin-bottom: 15px; 
+          text-transform: uppercase;
+        }
+        .description-text { line-height: 1.6; color: #eff1f6; font-size: 14px; margin-bottom: 20px; }
+      }
+    }
+
+   
+    .editor-panel {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      background: #1e1e1e;
+      min-height: 600px; 
+
+      .editor-header { 
+        background: #333; 
+        padding: 8px 15px; 
+        font-size: 12px; 
+        color: #aaa; 
+        border-bottom: 1px solid #444; 
+      }
+
+      .monaco-wrapper { 
+        height: 400px;
+        width: 100%;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .console-panel {
+        flex: 1;
+        background: #282828;
+        border-top: 2px solid #3e3e3e;
+        display: flex;
+        flex-direction: column;
+
+        .console-tabs {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 8px 15px;
+          background: #333;
+
+          .btn-run { 
+            background: #3a3a3a; 
+            color: #fff; 
+            border: 1px solid #555; 
+            padding: 5px 12px; 
+            border-radius: 4px; 
+            cursor: pointer; 
+            font-size: 13px;
+            margin-right: 8px; 
+            &:hover { background: #4a4a4a; } 
+          }
+          .btn-hint { 
+            background: #ffa116; 
+            color: #000; 
+            border: none; 
+            padding: 5px 12px; 
+            border-radius: 4px; 
+            font-weight: 600; 
+            font-size: 13px;
+            cursor: pointer; 
+            &:hover { background: #ffb84d; }
+          }
+          
+          .txt-success { color: #2db55d; font-weight: 600; font-size: 13px; }
+          .txt-fail { color: #ef4743; font-weight: 600; font-size: 13px; }
+        }
+
+        .console-output {
+          padding: 15px;
+          overflow-y: auto;
+          flex: 1;
+          font-size: 13px;
+          .lc-placeholder { color: #666; font-style: italic; }
+          .lc-error { color: #ef4743; background: rgba(239,71,67,0.1); padding: 10px; border-radius: 4px; border-left: 4px solid #ef4743; }
+          .lc-hint { color: #ffa116; background: rgba(255,161,22,0.1); padding: 12px; border-radius: 4px; border-left: 4px solid #ffa116; margin-bottom: 10px; line-height: 1.4; }
+        }
+      }
+    }
+  }
+}
+
+
+.lc-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  background: #333;
+  
+  th, td { padding: 8px 12px; text-align: left; border: 1px solid #444; font-size: 12px; }
+  th { background: #3e3e3e; color: #aaa; font-weight: 600; }
+  &.results { background: #1e1e1e; color: #fff; }
+}
+
+.table-scroll { overflow-x: auto; width: 100%; }
+
+
+@media (min-width: 641px) {
+  .leetcode-workspace .lc-nav .prob-title { font-size: 16px; }
+  .leetcode-workspace .content-split .description-panel .panel-body h2 { font-size: 24px; }
+}
+
+@media (min-width: 1024px) {
+  .leetcode-workspace .content-split {
+    flex-direction: row; 
+    overflow: hidden;
+
+    .description-panel {
+      width: 40%;
+      height: 100%;
+      border-right: 2px solid #3e3e3e;
+      border-bottom: none;
+      overflow-y: auto;
+    }
+
+    .editor-panel {
+      width: 60%;
+      height: 100%;
+      min-height: unset;
+
+      .monaco-wrapper {
+        flex: 1; 
+        height: unset; 
+      }
+      
+      .console-panel {
+        height: 35%; 
+      }
+    }
+  }
+}
+
+
+@media (min-width: 1281px) {
+  .leetcode-workspace {
+    max-width: 1800px;
+    margin: 0 auto;
+    border-left: 1px solid #444;
+    border-right: 1px solid #444;
+  }
+}

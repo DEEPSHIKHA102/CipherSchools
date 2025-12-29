@@ -1,0 +1,30 @@
+.assignment-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.dash-card {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 20px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.dash-card.complete {
+    border-left: 6px solid #48bb78;
+}
+
+.diff-tag {
+    font-size: 0.7rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 4px 8px;
+    border-radius: 4px;
+}
+
+.easy { color: #2f855a; background: #f0fff4; }
+.medium { color: #c05621; background: #fffaf0; }
+.hard { color: #c53030; background: #fff5f5; }

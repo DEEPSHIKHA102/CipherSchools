@@ -1,0 +1,82 @@
+.home-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  font-family: 'Inter', sans-serif;
+  background-color: #fff;
+
+  .home-header {
+    margin-bottom: 40px;
+    h1 { font-size: 28px; color: #333; font-weight: 700; }
+    p { color: #888; margin-top: 5px; }
+  }
+
+  .problem-list-wrapper {
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  .problem-table {
+    width: 100%;
+    border-collapse: collapse;
+    
+    thead {
+      background-color: #fafafa;
+      border-bottom: 1px solid #eeeeee;
+      th {
+        text-align: left;
+        padding: 15px;
+        color: #8a8a8a;
+        font-weight: 500;
+        font-size: 14px;
+      }
+    }
+
+    .problem-row {
+      border-bottom: 1px solid #f0f0f0;
+      transition: background 0.2s;
+
+      &:nth-child(even) { background-color: #fafafa; }
+      &:hover { background-color: #f7f9fa; }
+
+      td { padding: 15px; font-size: 15px; vertical-align: middle; }
+
+      .problem-index { color: #555; width: 50px; }
+
+      .problem-title {
+        color: #2c3e50;
+        font-weight: 500;
+        cursor: pointer;
+        &:hover { color: #007aff; text-decoration: underline; }
+      }
+
+      
+      .problem-difficulty {
+        font-weight: 500;
+        text-transform: capitalize;
+        
+        &.easy { color: #00af9b; }    
+        &.medium { color: #ffb800; }  
+        &.hard { color: #ff2d55; }   
+      }
+
+      .btn-attempt {
+        background-color: #eff2f6;
+        color: #2c3e50;
+        border: none;
+        padding: 6px 12px;
+        border-radius: 5px;
+        font-size: 13px;
+        font-weight: 500;
+        cursor: pointer;
+        transition: all 0.2s;
+
+        &:hover {
+          background-color: #e2e8f0;
+          color: #000;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,106 @@
+.lc-auth-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f7f9fa; 
+  font-family: 'Inter', -apple-system, sans-serif;
+
+  .lc-auth-card {
+    background: #fff;
+    width: 100%;
+    max-width: 400px;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+
+    .lc-logo {
+      text-align: center;
+      margin-bottom: 30px;
+      
+      .logo-icon {
+        display: inline-block;
+        background: #ffa116; 
+        color: white;
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        border-radius: 8px;
+        font-weight: bold;
+        font-size: 20px;
+        margin-bottom: 10px;
+      }
+
+      h2 {
+        font-size: 24px;
+        color: #262626;
+        margin: 0;
+      }
+    }
+
+    .error-banner {
+      background: #fff1f0;
+      border: 1px solid #ffa39e;
+      color: #cf1322;
+      padding: 10px;
+      border-radius: 4px;
+      margin-bottom: 20px;
+      font-size: 14px;
+    }
+
+    .lc-form {
+      .input-group {
+        margin-bottom: 15px;
+        
+        input {
+          width: 100%;
+          padding: 12px 15px;
+          border: 1px solid #d9d9d9;
+          border-radius: 5px;
+          font-size: 14px;
+          transition: border 0.3s;
+
+          &:focus {
+            outline: none;
+            border-color: #ffa116;
+          }
+        }
+      }
+
+      .btn-primary {
+        width: 100%;
+        padding: 12px;
+        background: #262626; 
+        color: white;
+        border: none;
+        border-radius: 5px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: opacity 0.3s;
+
+        &:hover {
+          opacity: 0.9;
+        }
+      }
+
+      .form-footer {
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        font-size: 13px;
+        color: #8c8c8c;
+
+        a {
+          color: #262626;
+          text-decoration: none;
+          font-weight: 500;
+          
+          &:hover {
+            color: #ffa116;
+          }
+        }
+      }
+    }
+  }
+}
